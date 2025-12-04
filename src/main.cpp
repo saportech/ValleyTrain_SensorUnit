@@ -4,7 +4,7 @@
 #include <esp_now.h>
 
 // MAC of the receiver (brain / UI ESP32)
-uint8_t receiverMac[] = {0x34, 0x5F, 0x45, 0x33, 0x5C, 0xD0};
+uint8_t receiverMac[] = {0x34, 0x5F, 0x45, 0x32, 0xF8, 0xBC};
 
 const int STATION_PIN = 4;           // the sensor pin on this board
 const unsigned long debounceDelay = 30; // ms
@@ -17,7 +17,6 @@ void onDataSent(const uint8_t *mac_addr, esp_now_send_status_t status);
 
 void setup() {
     Serial.begin(115200);
-    delay(4000);
 
     printMacAddress();
 
